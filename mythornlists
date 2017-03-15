@@ -1,0 +1,160 @@
+# Component list for the Cactus Computational Toolkit <http://www.cactuscode.org/>
+
+# To download these thorns via GetComponents, use then the following
+# command (on the same system where you originally used
+# GetComponents):
+
+#   cd Cactus (or whatever your source tree is called)
+#   bin/GetComponents --update --root=. Cactus_4.2.0.th
+
+
+
+!CRL_VERSION = 1.0
+
+!DEFINE ROOT = Cactus
+
+!DEFINE ARR  = $ROOT/arrangements
+!DEFINE COMPONENTLIST_TARGET = $ROOT/thornlists/
+
+
+!DEFINE CACTUS_RELEASE = Cactus_4.2.0
+
+
+# Cactus thorns
+!TARGET   = $ARR
+!TYPE     = svn
+!AUTH_URL = https://svn.cactuscode.org/arrangements/$1/$2/branches/$CACTUS_RELEASE
+!URL      = http://svn.cactuscode.org/arrangements/$1/$2/branches/$CACTUS_RELEASE
+!CHECKOUT =
+CactusBase/Boundary
+CactusBase/CartGrid3D
+CactusBase/CoordBase
+CactusBase/Fortran
+CactusBase/InitBase
+CactusBase/IOASCII
+CactusBase/IOBasic
+CactusBase/IOUtil
+CactusBase/SymBase
+CactusBase/Time
+
+CactusConnect/HTTPD
+CactusConnect/HTTPDExtra
+CactusConnect/Socket
+
+CactusDoc/CoreDoc
+
+CactusElliptic/EllBase
+CactusElliptic/EllSOR
+
+CactusExamples/DemoInterp
+CactusExamples/FleshInfo
+CactusExamples/HelloWorld
+CactusExamples/IDWaveMoL
+CactusExamples/SampleBoundary
+CactusExamples/SampleIO
+CactusExamples/TimerInfo
+CactusExamples/WaveMoL
+CactusExamples/WaveToy1DF77
+CactusExamples/WaveToy2DF77
+
+CactusIO/IOJpeg
+
+CactusNumerical/Cartoon2D
+CactusNumerical/Dissipation
+CactusNumerical/InterpToArray
+CactusNumerical/LocalInterp
+CactusNumerical/LocalReduce
+CactusNumerical/MoL
+CactusNumerical/Noise
+CactusNumerical/Norms
+CactusNumerical/Periodic
+CactusNumerical/ReflectionSymmetry
+CactusNumerical/RotatingSymmetry180
+CactusNumerical/RotatingSymmetry90
+CactusNumerical/Slab
+CactusNumerical/SlabTest
+CactusNumerical/SpaceMask
+CactusNumerical/SphericalSurface
+
+CactusPUGH/PUGH
+CactusPUGH/PUGHInterp
+CactusPUGH/PUGHReduce
+CactusPUGH/PUGHSlab
+
+CactusPUGHIO/IOHDF5
+CactusPUGHIO/IOHDF5Util
+
+CactusTest/TestArrays
+CactusTest/TestComplex
+CactusTest/TestCoordinates
+CactusTest/TestFortranCrayPointers
+CactusTest/TestFortranDependencies1
+CactusTest/TestFortranDependencies2
+CactusTest/TestFpointerNULL
+CactusTest/TestFreeF90
+CactusTest/TestGlobalReduce
+CactusTest/TestInclude1
+CactusTest/TestInclude2
+CactusTest/TestLocalReduce
+CactusTest/TestLoop
+CactusTest/TestPar
+CactusTest/TestReduce
+CactusTest/TestSchedule
+CactusTest/TestStrings
+CactusTest/TestTable
+CactusTest/TestTimers
+CactusTest/TestTypes
+
+CactusUtils/Formaline
+CactusUtils/NaNChecker
+CactusUtils/Nice
+CactusUtils/NoMPI
+CactusUtils/TerminationTrigger
+CactusUtils/TimerReport
+
+CactusWave/IDScalarWave
+CactusWave/IDScalarWaveC
+CactusWave/IDScalarWaveCXX
+CactusWave/IDScalarWaveElliptic
+CactusWave/WaveBinarySource
+CactusWave/WaveToyC
+CactusWave/WaveToyCXX
+CactusWave/WaveToyExtra
+CactusWave/WaveToyF77
+CactusWave/WaveToyF90
+CactusWave/WaveToyFreeF90
+
+
+
+# Additional Cactus thorns
+!TARGET   = $ARR
+!TYPE     = svn
+!AUTH_URL = https://svn.cactuscode.org/projects/$1/$2/branches/$CACTUS_RELEASE
+!URL      = http://svn.cactuscode.org/projects/$1/$2/branches/$CACTUS_RELEASE
+!CHECKOUT =
+ExternalLibraries/BLAS
+ExternalLibraries/F5
+ExternalLibraries/FFTW3
+ExternalLibraries/GSL
+ExternalLibraries/HDF5
+ExternalLibraries/hwloc
+ExternalLibraries/LAPACK
+ExternalLibraries/MPI
+ExternalLibraries/OpenSSL
+ExternalLibraries/curl
+ExternalLibraries/flickcurl
+ExternalLibraries/git
+ExternalLibraries/libjpeg
+ExternalLibraries/libpng
+ExternalLibraries/libxml2
+ExternalLibraries/lua
+ExternalLibraries/zlib
+
+TAT/TATelliptic
+
+
+
+# Private thorns
+!TARGET   = $ARR
+!TYPE     = ignore
+!CHECKOUT = 

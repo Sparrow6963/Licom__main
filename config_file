@@ -1,0 +1,25 @@
+CC=mpiicc
+CXX=mpiicpc
+F77=mpiifort
+F90=mpiifort
+
+CPPFLAGS= -O3 -DCCTK_DISABLE_OMP_COLLAPSE -L/work1/jjr/soft/netcdf/lib -mcmodel=large -shared-intel -i4 -convert big_endian -assume byterecl -fp-model precise   -fp-speculation=safe -heap-arrays
+
+FPPFLAGS= -O3 -DCCTK_DISABLE_OMP_COLLAPSE -traditional -mcmodel=large -shared-intel -i4 -convert big_endian -assume byterecl -fp-model precise   -fp-speculation=safe -heap-arrays
+
+CFLAGS	= -O3 -xAVX -std=c99 -U__STRICT_ANSI__ -mcmodel=large -shared-intel -i4 -convert big_endian -assume byterecl -fp-model precise   -fp-speculation=safe -heap-arrays
+
+CXXFLAGS= -O3 -xAVX -U_cplusplus -std=c++0x -restrict -D__builtin_isnan=::isnan
+
+F77FLAGS= -O3 -fpp -w -r8 -xAVX -mcmodel=large -shared-intel -i4 -convert big_endian -assume byterecl -fp-model precise   -fp-speculation=safe -heap-arrays
+
+F90FLAGS= -O3 -fpp -w -r8 -xAVX -free -traceback  -free -traceback  -mcmodel=large -shared-intel -i4 -convert big_endian -assume byterecl -fp-model precise   -fp-speculation=safe -heap-arrays 
+
+#FFLAGS = -O3  -mcmodel=large -shared-intel -r8 -i4 -convert big_endian -assume byterecl -fp-model precise   -fp-speculation=safe -heap-arrays 
+
+DEBUG=no
+OPTIMISE=yes
+WARN=no
+
+MPI_DIR=/soft/mpi/impi/4.1.3.049/intel64
+
